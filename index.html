@@ -3,164 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GTA 5 Racing - Mini Game 🚗💨</title>
+  <title>Game Đánh Bài Ăn Xu Ảo 💰 | Ân 18cm 😎</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: radial-gradient(circle at top, #111, #000);
-      overflow: hidden;
+      background: radial-gradient(circle at top, #032, #000);
+      color: #fff;
       font-family: 'Segoe UI', sans-serif;
-      color: white;
       text-align: center;
+      padding: 20px;
     }
 
     h1 {
-      margin: 10px 0;
+      color: #ffcc00;
+      text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff6600;
+    }
+
+    .author {
       color: #00ffff;
+      margin-bottom: 25px;
       text-shadow: 0 0 10px #00ffff;
     }
 
-    #gameArea {
-      position: relative;
-      width: 400px;
-      height: 600px;
-      margin: 20px auto;
-      background: #333;
-      border: 3px solid #00ffff;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .roadLine {
-      position: absolute;
-      width: 10px;
-      height: 100px;
-      background: white;
-      left: 195px;
-      animation: moveLines 1s linear infinite;
-    }
-
-    @keyframes moveLines {
-      from { top: -100px; }
-      to { top: 600px; }
-    }
-
-    #player {
-      position: absolute;
-      bottom: 20px;
-      left: 175px;
-      width: 50px;
-      height: 100px;
-      background: red;
-      border-radius: 5px;
-    }
-
-    .enemy {
-      position: absolute;
-      width: 50px;
-      height: 100px;
-      background: yellow;
-      border-radius: 5px;
-      top: -120px;
-      animation: moveEnemy 3s linear infinite;
-    }
-
-    @keyframes moveEnemy {
-      from { top: -120px; }
-      to { top: 620px; }
-    }
-
-    #score {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
-
-    footer {
-      margin-top: 15px;
-      color: #aaa;
-    }
-    footer span {
-      color: #00ffff;
+    button {
+      background: linear-gradient(45deg, #ffcc00, #ff6600);
+      border: none;
+      color: #000;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
       font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <h1>🚗 GTA 5 Racing Mini Game 💨</h1>
-  <div id="gameArea">
-    <div id="player"></div>
-  </div>
-  <div id="score">Điểm: 0</div>
-  <footer>Thiết kế bởi <span>Ân 18cm 😎</span></footer>
-
-  <script>
-    const gameArea = document.getElementById("gameArea");
-    const player = document.getElementById("player");
-    const scoreDisplay = document.getElementById("score");
-    let gameOver = false;
-    let score = 0;
-    let playerX = 175;
-
-    // tạo các vạch đường
-    for (let i = 0; i < 6; i++) {
-      let line = document.createElement("div");
-      line.classList.add("roadLine");
-      line.style.top = (i * 120) + "px";
-      gameArea.appendChild(line);
+      font-size: 1em;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #ff6600;
     }
 
-    // điều khiển xe
-    document.addEventListener("keydown", (e) => {
-      if (gameOver) return;
-      if (e.key === "ArrowLeft" && playerX > 0) playerX -= 25;
-      if (e.key === "ArrowRight" && playerX < 350) playerX += 25;
-      player.style.left = playerX + "px";
-    });
-
-    // tạo xe địch
-    function createEnemy() {
-      if (gameOver) return;
-      let enemy = document.createElement("div");
-      enemy.classList.add("enemy");
-      enemy.style.left = Math.floor(Math.random() * 7) * 50 + "px";
-      gameArea.appendChild(enemy);
-
-      let enemyMove = setInterval(() => {
-        if (gameOver) {
-          clearInterval(enemyMove);
-          return;
-        }
-        let enemyTop = parseInt(window.getComputedStyle(enemy).getPropertyValue("top"));
-        enemy.style.top = enemyTop + 5 + "px";
-
-        // kiểm tra va chạm
-        if (
-          enemyTop > 480 &&
-          enemyTop < 600 &&
-          Math.abs(parseInt(enemy.style.left) - playerX) < 50
-        ) {
-          endGame();
-          clearInterval(enemyMove);
-        }
-
-        // reset xe địch
-        if (enemyTop > 600) {
-          enemy.remove();
-          score++;
-          scoreDisplay.textContent = "Điểm: " + score;
-        }
-      }, 20);
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ffcc00;
     }
 
-    // tạo xe địch mỗi 1.5s
-    setInterval(createEnemy, 1500);
-
-    // kết thúc game
-    function endGame() {
-      gameOver = true;
-      alert("💥 Bạn đã va chạm! Tổng điểm: " + score);
-      window.location.reload();
+    .card-area {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      gap: 40px;
     }
-  </script>
-</body>
-</html>
+
+    .player, .cpu {
+      text-align: center;
+
+      
