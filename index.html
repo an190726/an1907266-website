@@ -3,87 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Đánh Bài Ăn Xu Ảo 💰 | Ân 18cm 😎</title>
+  <title>Ân 18cm Roblox 🎮</title>
   <style>
     body {
-      background: radial-gradient(circle at top, #032, #000);
-      color: #fff;
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #000, #111, #222);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #0b0b0b;
+      color: #fff;
+      padding: 15px 30px;
       text-align: center;
-      padding: 20px;
+      box-shadow: 0 0 10px #00ffff;
     }
 
-    h1 {
-      color: #ffcc00;
-      text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff6600;
-    }
-
-    .author {
-      color: #00ffff;
-      margin-bottom: 25px;
-      text-shadow: 0 0 10px #00ffff;
-    }
-
-    button {
-      background: linear-gradient(45deg, #ffcc00, #ff6600);
-      border: none;
-      color: #000;
-      padding: 12px 25px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1em;
-      transition: 0.3s;
-      box-shadow: 0 0 10px #ff6600;
-    }
-
-    button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #ffcc00;
-    }
-
-    .card-area {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-      gap: 40px;
-    }
-
-    .player, .cpu {
-      text-align: center;
-    }
-
-    .card {
-      background: white;
-      color: black;
-      width: 80px;
-      height: 120px;
-      line-height: 120px;
+    header h1 {
       font-size: 2em;
-      border-radius: 10px;
-      border: 2px solid #000;
-      display: inline-block;
-      box-shadow: 0 0 10px #fff;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff;
     }
 
-    #result {
-      font-size: 1.3em;
-      color: #00ff99;
-      margin-top: 20px;
-      font-weight: bold;
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: url('https://tr.rbxcdn.com/f4b50e9caa5d4b31e2c22c62c485b267/768/432/Image/Webp') no-repeat center/cover;
+      position: relative;
     }
 
-    .scoreboard {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      margin: 20px 0;
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ffcc00;
+      text-shadow: 0 0 15px #ff6600;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      background: linear-gradient(45deg, #00ffff, #0099ff);
+      color: #000;
+      border: none;
+      padding: 15px 35px;
+      border-radius: 8px;
       font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00ffff;
+      transition: transform 0.3s;
+    }
+
+    .hero button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px #00ccff;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .game-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .game-card {
+      background: #111;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      width: 250px;
+      transition: 0.3s;
+      overflow: hidden;
+      box-shadow: 0 0 10px #00ffff50;
+    }
+
+    .game-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .game-card h3 {
+      color: #ffcc00;
+      margin: 10px 0;
     }
 
     footer {
-      margin-top: 40px;
+      background: #000;
+      text-align: center;
+      padding: 15px;
       color: #aaa;
+      margin-top: 40px;
     }
 
     footer span {
@@ -93,89 +131,45 @@
   </style>
 </head>
 <body>
-  <h1>🃏 Game Đánh Bài Ăn Xu Ảo 💰</h1>
-  <div class="author">Tạo bởi <b>Ân 18cm 😎</b></div>
 
-  <div class="scoreboard">
-    <div>💎 Bạn: <span id="playerCoins">1000</span> xu</div>
-    <div>🤖 Máy: <span id="cpuCoins">1000</span> xu</div>
-  </div>
+  <header>
+    <h1>Ân 18cm Roblox 🎮</h1>
+  </header>
 
-  <div class="card-area">
-    <div class="player">
-      <h2>Bạn</h2>
-      <div id="playerCard" class="card">?</div>
-    </div>
-    <div class="cpu">
-      <h2>Máy</h2>
-      <div id="cpuCard" class="card">?</div>
+  <div class="hero">
+    <div class="hero-content">
+      <h2>Thế Giới Roblox Của Ân 😎</h2>
+      <p>Khám phá, sáng tạo và đua xe, bắn súng, xây nhà... trong Roblox! 🚀</p>
+      <button onclick="window.open('https://www.roblox.com', '_blank')">Chơi Ngay</button>
     </div>
   </div>
 
-  <button id="playBtn" onclick="playGame()">Đánh bài!</button>
-  <div id="result"></div>
+  <section>
+    <h2>🔥 Top Game Roblox Yêu Thích</h2>
+    <div class="game-list">
+      <div class="game-card">
+        <img src="https://tr.rbxcdn.com/cbdf9ac9b83b95df4c3c0799f42b8a0a/768/432/Image/Webp" alt="Brookhaven">
+        <h3>🏡 Brookhaven RP</h3>
+        <p>Sống cuộc đời mơ ước trong thành phố Roblox.</p>
+      </div>
 
-  <footer>© 2025 | Thiết kế bởi <span>Ân 18cm 😎</span></footer>
+      <div class="game-card">
+        <img src="https://tr.rbxcdn.com/2bda9f3ffbb12d77b4f60b19b3b48d18/768/432/Image/Webp" alt="Adopt Me">
+        <h3>🐶 Adopt Me!</h3>
+        <p>Nuôi thú cưng, xây nhà và kết bạn toàn cầu!</p>
+      </div>
 
-  <script>
-    const cards = [2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
-    const values = {J:11, Q:12, K:13, A:14};
+      <div class="game-card">
+        <img src="https://tr.rbxcdn.com/fce3e9673a319e4b8d39af857d21bcbf/768/432/Image/Webp" alt="Jailbreak">
+        <h3>🚓 Jailbreak</h3>
+        <p>Trốn tù, cướp ngân hàng, hoặc trở thành cảnh sát truy đuổi!</p>
+      </div>
+    </div>
+  </section>
 
-    let playerCoins = 1000;
-    let cpuCoins = 1000;
-    const bet = 100;
+  <footer>
+    © 2025 | Thiết kế bởi <span>Ân 18cm 😎</span> | Roblox Fan Site
+  </footer>
 
-    function getValue(card) {
-      return values[card] || card;
-    }
-
-    function playGame() {
-      if (playerCoins <= 0) {
-        document.getElementById("result").textContent = "💀 Bạn đã hết xu! Game kết thúc!";
-        return;
-      }
-
-      document.getElementById("result").textContent = "🃏 Đang chia bài...";
-      document.getElementById("playBtn").disabled = true;
-
-      setTimeout(() => {
-        const playerCard = cards[Math.floor(Math.random() * cards.length)];
-        const cpuCard = cards[Math.floor(Math.random() * cards.length)];
-
-        document.getElementById("playerCard").textContent = playerCard;
-        document.getElementById("cpuCard").textContent = cpuCard;
-
-        const playerValue = getValue(playerCard);
-        const cpuValue = getValue(cpuCard);
-
-        let result = "";
-
-        if (playerValue > cpuValue) {
-          playerCoins += bet;
-          cpuCoins -= bet;
-          result = "🔥 Bạn thắng +100 xu!";
-        } else if (playerValue < cpuValue) {
-          playerCoins -= bet;
-          cpuCoins += bet;
-          result = "😅 Máy thắng, bạn mất 100 xu!";
-        } else {
-          result = "🤝 Hòa, không ai mất xu.";
-        }
-
-        document.getElementById("playerCoins").textContent = playerCoins;
-        document.getElementById("cpuCoins").textContent = cpuCoins;
-        document.getElementById("result").textContent = result;
-        document.getElementById("playBtn").disabled = false;
-
-        if (playerCoins <= 0) {
-          document.getElementById("result").textContent = "💀 Bạn đã hết xu! Game kết thúc!";
-          document.getElementById("playBtn").disabled = true;
-        } else if (cpuCoins <= 0) {
-          document.getElementById("result").textContent = "🎉 Máy hết xu! Bạn thắng toàn tập!";
-          document.getElementById("playBtn").disabled = true;
-        }
-      }, 1000);
-    }
-  </script>
 </body>
 </html>
