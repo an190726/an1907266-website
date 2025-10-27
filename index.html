@@ -3,145 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tài Xỉu & Nổ Hũ | Chủ Ân 18cm 😎</title>
+  <title>GTA 5 Racing - Mini Game 🚗💨</title>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: radial-gradient(circle at top, #1a1a1a, #000);
-      color: #fff;
+      background: radial-gradient(circle at top, #111, #000);
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
       text-align: center;
-      padding: 20px;
     }
 
     h1 {
-      color: #ffcc00;
-      text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff6600;
-      font-size: 2.2em;
-      margin-bottom: 10px;
-    }
-
-    .author {
-      font-size: 1.2em;
+      margin: 10px 0;
       color: #00ffff;
       text-shadow: 0 0 10px #00ffff;
-      margin-bottom: 30px;
     }
 
-    button {
-      background: linear-gradient(45deg, #ffcc00, #ff6600);
-      border: none;
-      padding: 10px 25px;
-      margin: 10px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      color: #000;
-      font-size: 1em;
-      box-shadow: 0 0 10px #ff6600;
-      transition: transform 0.2s;
-    }
-
-    button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #ffcc00;
-    }
-
-    .game-section {
-      background: rgba(255, 255, 255, 0.05);
-      border: 2px solid #ffcc00;
+    #gameArea {
+      position: relative;
+      width: 400px;
+      height: 600px;
+      margin: 20px auto;
+      background: #333;
+      border: 3px solid #00ffff;
+      overflow: hidden;
       border-radius: 10px;
-      padding: 25px;
-      margin-top: 20px;
-      box-shadow: 0 0 15px #ff6600;
     }
 
-    .dice, .slot {
-      font-size: 2em;
-      margin: 15px;
+    .roadLine {
+      position: absolute;
+      width: 10px;
+      height: 100px;
+      background: white;
+      left: 195px;
+      animation: moveLines 1s linear infinite;
     }
 
-    .loading {
-      color: #ff6600;
+    @keyframes moveLines {
+      from { top: -100px; }
+      to { top: 600px; }
+    }
+
+    #player {
+      position: absolute;
+      bottom: 20px;
+      left: 175px;
+      width: 50px;
+      height: 100px;
+      background: red;
+      border-radius: 5px;
+    }
+
+    .enemy {
+      position: absolute;
+      width: 50px;
+      height: 100px;
+      background: yellow;
+      border-radius: 5px;
+      top: -120px;
+      animation: moveEnemy 3s linear infinite;
+    }
+
+    @keyframes moveEnemy {
+      from { top: -120px; }
+      to { top: 620px; }
+    }
+
+    #score {
       font-size: 1.2em;
       margin-top: 10px;
     }
 
     footer {
-      margin-top: 40px;
-      font-size: 1em;
+      margin-top: 15px;
       color: #aaa;
     }
-
     footer span {
       color: #00ffff;
-      text-shadow: 0 0 5px #00ffff;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h1>🎮 Mini Game: Tài Xỉu & Nổ Hũ 🎰</h1>
-  <div class="author">✨ Tạo bởi <strong>Ân 18cm 😎</strong> ✨</div>
-
-  <!-- Game Tài Xỉu -->
-  <div class="game-section">
-    <h2>🎲 Game Tài Xỉu</h2>
-    <div id="dice-result" class="dice">🎲🎲🎲</div>
-    <button onclick="choiTaiXiu()">Quay xúc xắc</button>
-    <p id="tx-loading" class="loading"></p>
-    <p id="tx-output"></p>
+  <h1>🚗 GTA 5 Racing Mini Game 💨</h1>
+  <div id="gameArea">
+    <div id="player"></div>
   </div>
-
-  <!-- Game Nổ Hũ -->
-  <div class="game-section">
-    <h2>🎰 Game Nổ Hũ</h2>
-    <div id="slot-result" class="slot">🍒 🍋 🍇</div>
-    <button onclick="choiNoHu()">Quay Hũ</button>
-    <p id="nh-loading" class="loading"></p>
-    <p id="nh-output"></p>
-  </div>
-
-  <footer>
-    © 2025 | Thiết kế bởi <span>Ân 18cm 😎</span>
-  </footer>
+  <div id="score">Điểm: 0</div>
+  <footer>Thiết kế bởi <span>Ân 18cm 😎</span></footer>
 
   <script>
-    // ---- GAME TÀI XỈU ----
-    function choiTaiXiu() {
-      document.getElementById("tx-output").textContent = "";
-      document.getElementById("tx-loading").textContent = "⏳ Đang quay xúc xắc...";
-      document.getElementById("dice-result").textContent = "🎲🎲🎲";
+    const gameArea = document.getElementById("gameArea");
+    const player = document.getElementById("player");
+    const scoreDisplay = document.getElementById("score");
+    let gameOver = false;
+    let score = 0;
+    let playerX = 175;
 
-      setTimeout(() => {
-        let dice1 = Math.floor(Math.random() * 6) + 1;
-        let dice2 = Math.floor(Math.random() * 6) + 1;
-        let dice3 = Math.floor(Math.random() * 6) + 1;
-        let sum = dice1 + dice2 + dice3;
-        document.getElementById("dice-result").textContent = `🎲 ${dice1} + ${dice2} + ${dice3} = ${sum}`;
-        let result = sum >= 11 ? "Tài (11–17)" : "Xỉu (3–10)";
-        document.getElementById("tx-loading").textContent = "";
-        document.getElementById("tx-output").textContent = `Kết quả: ${result}`;
-      }, 5000); // 5 giây quay
+    // tạo các vạch đường
+    for (let i = 0; i < 6; i++) {
+      let line = document.createElement("div");
+      line.classList.add("roadLine");
+      line.style.top = (i * 120) + "px";
+      gameArea.appendChild(line);
     }
 
-    // ---- GAME NỔ HŨ ----
-    const icons = ["🍒", "🍋", "🍇", "🍉", "⭐", "💎"];
-    function choiNoHu() {
-      document.getElementById("nh-output").textContent = "";
-      document.getElementById("nh-loading").textContent = "🎰 Đang quay hũ trong 5s...";
-      document.getElementById("slot-result").textContent = "🔄 🔄 🔄";
+    // điều khiển xe
+    document.addEventListener("keydown", (e) => {
+      if (gameOver) return;
+      if (e.key === "ArrowLeft" && playerX > 0) playerX -= 25;
+      if (e.key === "ArrowRight" && playerX < 350) playerX += 25;
+      player.style.left = playerX + "px";
+    });
 
-      setTimeout(() => {
-        let slot1 = icons[Math.floor(Math.random() * icons.length)];
-        let slot2 = icons[Math.floor(Math.random() * icons.length)];
-        let slot3 = icons[Math.floor(Math.random() * icons.length)];
-        document.getElementById("slot-result").textContent = `${slot1} ${slot2} ${slot3}`;
-        let message = (slot1 === slot2 && slot2 === slot3)
-          ? "🎉 NỔ HŨ! Bạn trúng thưởng lớn!"
-          : "😅 Thua rồi, thử lại nhé!";
-        document.getElementById("nh-loading").textContent = "";
-        document.getElementById("nh-output").textContent = message;
-      }, 5000); // 5 giây quay
+    // tạo xe địch
+    function createEnemy() {
+      if (gameOver) return;
+      let enemy = document.createElement("div");
+      enemy.classList.add("enemy");
+      enemy.style.left = Math.floor(Math.random() * 7) * 50 + "px";
+      gameArea.appendChild(enemy);
+
+      let enemyMove = setInterval(() => {
+        if (gameOver) {
+          clearInterval(enemyMove);
+          return;
+        }
+        let enemyTop = parseInt(window.getComputedStyle(enemy).getPropertyValue("top"));
+        enemy.style.top = enemyTop + 5 + "px";
+
+        // kiểm tra va chạm
+        if (
+          enemyTop > 480 &&
+          enemyTop < 600 &&
+          Math.abs(parseInt(enemy.style.left) - playerX) < 50
+        ) {
+          endGame();
+          clearInterval(enemyMove);
+        }
+
+        // reset xe địch
+        if (enemyTop > 600) {
+          enemy.remove();
+          score++;
+          scoreDisplay.textContent = "Điểm: " + score;
+        }
+      }, 20);
+    }
+
+    // tạo xe địch mỗi 1.5s
+    setInterval(createEnemy, 1500);
+
+    // kết thúc game
+    function endGame() {
+      gameOver = true;
+      alert("💥 Bạn đã va chạm! Tổng điểm: " + score);
+      window.location.reload();
     }
   </script>
 </body>
