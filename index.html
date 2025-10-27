@@ -139,3 +139,208 @@
 
 </body>
 </html>
+✅ Tính năng:
+Hero banner đẹp mắt với overlay màu đen mờ.
+
+Phần giới thiệu có ảnh đại diện tròn.
+
+Liệt kê kỹ năng và thông tin liên hệ.
+
+Menu điều hướng mượt mà.
+
+Nếu bạn muốn, mình có thể nâng cấp trang này thành phiên bản tương tác với:
+
+Hiệu ứng hover đẹp trên các kỹ năng
+
+Popup lời nhắn / animation
+
+Slider ảnh dự án cá nhân
+
+Mình có thể viết phiên bản nâng cấp đó luôn cho bạn. Bạn có muốn mình làm không?
+
+
+Bạn đã nói:
+tạo code 1  trang website giới thiệu về đỗ chí ân thông tin các nhân
+
+
+ChatGPT đã nói:
+Được rồi! Bạn muốn một trang web giới thiệu về Đỗ Chí Ân với thông tin cá nhân chi tiết, có cấu trúc gọn gàng, dễ nhìn và chuyên nghiệp. Mình sẽ tạo một trang HTML + CSS với các phần:
+
+Header / tên
+
+Thông tin cá nhân (Ngày sinh, địa chỉ, email, sở thích…)
+
+Kỹ năng / học vấn / dự án
+
+Liên hệ
+
+Dưới đây là ví dụ:
+
+🌐 Website Giới Thiệu Đỗ Chí Ân (Thông tin cá nhân)
+html
+Sao chép mã
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đỗ Chí Ân | Thông Tin Cá Nhân</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #0b3d91;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #063270;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #0b3d91;
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .profile-info h2 {
+      margin-top: 0;
+      color: #0b3d91;
+    }
+
+    .profile-info p {
+      line-height: 1.6;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      color: #0b3d91;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #0b3d91;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media(max-width: 600px) {
+      .profile {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-info {
+        flex: unset;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Đỗ Chí Ân</h1>
+    <p>Trang giới thiệu thông tin cá nhân</p>
+  </header>
+
+  <nav>
+    <a href="#personal">Thông Tin Cá Nhân</a>
+    <a href="#skills">Kỹ Năng</a>
+    <a href="#education">Học Vấn</a>
+    <a href="#contact">Liên Hệ</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="personal" class="profile">
+      <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=400&q=80" alt="Đỗ Chí Ân">
+      <div class="profile-info">
+        <h2>Thông Tin Cá Nhân</h2>
+        <p><b>Họ và tên:</b> Đỗ Chí Ân</p>
+        <p><b>Ngày sinh:</b> 01/01/2000</p>
+        <p><b>Địa chỉ:</b> Hà Nội, Việt Nam</p>
+        <p><b>Email:</b> dochi.an@example.com</p>
+        <p><b>Sở thích:</b> Lập trình, đọc sách, du lịch</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Kỹ Năng</h2>
+      <ul>
+        <li>Lập trình Web: HTML, CSS, JavaScript</li>
+        <li>Thiết kế đồ họa: Photoshop, Illustrator</li>
+        <li>Quản lý dự án & sáng tạo nội dung</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Học Vấn</h2>
+      <p>Đại học Công nghệ Hà Nội (HUST) – Chuyên ngành Công nghệ thông tin</p>
+      <p>Hoàn thành các khóa học lập trình web, phát triển ứng dụng, và thiết kế UX/UI</p>
+    </section>
+
+    <section id="contact">
+      <h2>Liên Hệ</h2>
+      <p>Email: dochi.an@example.com</p>
+      <p>Hotline: 0909-XXXXXX</p>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 | Trang cá nhân Đỗ Chí Ân
+  </footer>
+
+</body>
+</html>
