@@ -1,176 +1,74 @@
-<!DOCTYPE html>
+V<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ân 18cm Roblox 🎮</title>
+  <title>Tỏ Tình Vi Cam 💖</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #000, #111, #222);
+      background: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
       color: white;
-      overflow-x: hidden;
-    }
-
-    header {
-      background: #0b0b0b;
-      color: #fff;
-      padding: 15px 30px;
       text-align: center;
-      box-shadow: 0 0 10px #00ffff;
-    }
-
-    header h1 {
-      font-size: 2em;
-      color: #00ffff;
-      text-shadow: 0 0 15px #00ffff;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: url('https://tr.rbxcdn.com/f4b50e9caa5d4b31e2c22c62c485b267/768/432/Image/Webp') no-repeat center/cover;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #ffcc00;
-      text-shadow: 0 0 15px #ff6600;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-
-    .hero button {
-      background: linear-gradient(45deg, #00ffff, #0099ff);
-      color: #000;
-      border: none;
-      padding: 15px 35px;
-      border-radius: 8px;
-      font-size: 1.1em;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 0 20px #00ffff;
-      transition: transform 0.3s;
-    }
-
-    .hero button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 40px #00ccff;
-    }
-
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .game-list {
+      height: 100vh;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
-      gap: 25px;
-      margin-top: 30px;
+      align-items: center;
     }
 
-    .game-card {
-      background: #111;
-      border: 2px solid #00ffff;
-      border-radius: 10px;
-      width: 250px;
+    h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 2px 2px 10px #000;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin: 20px 0;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       transition: 0.3s;
-      overflow: hidden;
-      box-shadow: 0 0 10px #00ffff50;
     }
 
-    .game-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 20px #00ffff;
+    button:hover {
+      transform: scale(1.1);
+      background: #ff2a55;
     }
 
-    .game-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .game-card h3 {
-      color: #ffcc00;
-      margin: 10px 0;
-    }
-
-    footer {
-      background: #000;
-      text-align: center;
-      padding: 15px;
-      color: #aaa;
-      margin-top: 40px;
-    }
-
-    footer span {
-      color: #00ffff;
-      font-weight: bold;
+    #loveMessage {
+      margin-top: 30px;
+      font-size: 1.8em;
+      display: none;
+      text-shadow: 2px 2px 10px #000;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Ân 18cm Roblox 🎮</h1>
-  </header>
+  <h1>Vi Cam 💖</h1>
+  <p>Mình muốn nói với bạn điều này…</p>
+  <button onclick="showMessage()">Nhấn để nhận tình cảm!</button>
 
-  <div class="hero">
-    <div class="hero-content">
-      <h2>Thế Giới Roblox Của Ân 😎</h2>
-      <p>Khám phá, sáng tạo và đua xe, bắn súng, xây nhà... trong Roblox! 🚀</p>
-      <button onclick="window.open('https://www.roblox.com', '_blank')">Chơi Ngay</button>
-    </div>
-  </div>
+  <div id="loveMessage">Mình thích bạn rất nhiều! 😍💌</div>
 
-  <section>
-    <h2>🔥 Top Game Roblox Yêu Thích</h2>
-    <div class="game-list">
-      <div class="game-card">
-        <img src="https://tr.rbxcdn.com/cbdf9ac9b83b95df4c3c0799f42b8a0a/768/432/Image/Webp" alt="Brookhaven">
-        <h3>🏡 Brookhaven RP</h3>
-        <p>Sống cuộc đời mơ ước trong thành phố Roblox.</p>
-      </div>
-
-      <div class="game-card">
-        <img src="https://tr.rbxcdn.com/2bda9f3ffbb12d77b4f60b19b3b48d18/768/432/Image/Webp" alt="Adopt Me">
-        <h3>🐶 Adopt Me!</h3>
-        <p>Nuôi thú cưng, xây nhà và kết bạn toàn cầu!</p>
-      </div>
-
-      <div class="game-card">
-        <img src="https://tr.rbxcdn.com/fce3e9673a319e4b8d39af857d21bcbf/768/432/Image/Webp" alt="Jailbreak">
-        <h3>🚓 Jailbreak</h3>
-        <p>Trốn tù, cướp ngân hàng, hoặc trở thành cảnh sát truy đuổi!</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 | Thiết kế bởi <span>Ân 18cm 😎</span> | Roblox Fan Site
-  </footer>
+  <script>
+    function showMessage() {
+      const msg = document.getElementById('loveMessage');
+      msg.style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>
-
