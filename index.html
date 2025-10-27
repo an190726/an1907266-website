@@ -51,5 +51,131 @@
 
     .player, .cpu {
       text-align: center;
+    }
 
-      
+    .card {
+      background: white;
+      color: black;
+      width: 80px;
+      height: 120px;
+      line-height: 120px;
+      font-size: 2em;
+      border-radius: 10px;
+      border: 2px solid #000;
+      display: inline-block;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    #result {
+      font-size: 1.3em;
+      color: #00ff99;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .scoreboard {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin: 20px 0;
+      font-size: 1.1em;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #aaa;
+    }
+
+    footer span {
+      color: #00ffff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>🃏 Game Đánh Bài Ăn Xu Ảo 💰</h1>
+  <div class="author">Tạo bởi <b>Ân 18cm 😎</b></div>
+
+  <div class="scoreboard">
+    <div>💎 Bạn: <span id="playerCoins">1000</span> xu</div>
+    <div>🤖 Máy: <span id="cpuCoins">1000</span> xu</div>
+  </div>
+
+  <div class="card-area">
+    <div class="player">
+      <h2>Bạn</h2>
+      <div id="playerCard" class="card">?</div>
+    </div>
+    <div class="cpu">
+      <h2>Máy</h2>
+      <div id="cpuCard" class="card">?</div>
+    </div>
+  </div>
+
+  <button id="playBtn" onclick="playGame()">Đánh bài!</button>
+  <div id="result"></div>
+
+  <footer>© 2025 | Thiết kế bởi <span>Ân 18cm 😎</span></footer>
+
+  <script>
+    const cards = [2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
+    const values = {J:11, Q:12, K:13, A:14};
+
+    let playerCoins = 1000;
+    let cpuCoins = 1000;
+    const bet = 100;
+
+    function getValue(card) {
+      return values[card] || card;
+    }
+
+    function playGame() {
+      if (playerCoins <= 0) {
+        document.getElementById("result").textContent = "💀 Bạn đã hết xu! Game kết thúc!";
+        return;
+      }
+
+      document.getElementById("result").textContent = "🃏 Đang chia bài...";
+      document.getElementById("playBtn").disabled = true;
+
+      setTimeout(() => {
+        const playerCard = cards[Math.floor(Math.random() * cards.length)];
+        const cpuCard = cards[Math.floor(Math.random() * cards.length)];
+
+        document.getElementById("playerCard").textContent = playerCard;
+        document.getElementById("cpuCard").textContent = cpuCard;
+
+        const playerValue = getValue(playerCard);
+        const cpuValue = getValue(cpuCard);
+
+        let result = "";
+
+        if (playerValue > cpuValue) {
+          playerCoins += bet;
+          cpuCoins -= bet;
+          result = "🔥 Bạn thắng +100 xu!";
+        } else if (playerValue < cpuValue) {
+          playerCoins -= bet;
+          cpuCoins += bet;
+          result = "😅 Máy thắng, bạn mất 100 xu!";
+        } else {
+          result = "🤝 Hòa, không ai mất xu.";
+        }
+
+        document.getElementById("playerCoins").textContent = playerCoins;
+        document.getElementById("cpuCoins").textContent = cpuCoins;
+        document.getElementById("result").textContent = result;
+        document.getElementById("playBtn").disabled = false;
+
+        if (playerCoins <= 0) {
+          document.getElementById("result").textContent = "💀 Bạn đã hết xu! Game kết thúc!";
+          document.getElementById("playBtn").disabled = true;
+        } else if (cpuCoins <= 0) {
+          document.getElementById("result").textContent = "🎉 Máy hết xu! Bạn thắng toàn tập!";
+          document.getElementById("playBtn").disabled = true;
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
