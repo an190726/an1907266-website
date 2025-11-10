@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chí Ân Web Design | Thông Tin</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chí Ân Web Design</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="thongtin.html" class="active">Thông tin</a></li> 
+                <li><a href="dichvu.html">Dịch vụ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Về Chí Ân: Tầm Nhìn và Kinh Nghiệm</h2>
+        
+        <section class="about-us">
+            <h3>Sứ mệnh của tôi</h3>
+            <p><strong>Chí Ân Web Design</strong> tập trung vào việc tạo ra các giải pháp web **hiệu quả** và **thẩm mỹ** cho các dự án cá nhân và doanh nghiệp nhỏ. Sứ mệnh của tôi là biến ý tưởng của bạn thành một giao diện trực tuyến chuyên nghiệp, dễ sử dụng.</p>
+            <p>Tôi cam kết mang lại sản phẩm chất lượng, từ mã nguồn sạch đến trải nghiệm người dùng tối ưu trên mọi thiết bị.</p>
+            
+            <h3>Lĩnh vực chuyên môn</h3>
+            <ul>
+                <li>✅ **Thiết kế Responsive:** Đảm bảo trang web hiển thị hoàn hảo trên điện thoại, máy tính bảng và máy tính.</li>
+                <li>✅ **Lập trình Front-end:** Thành thạo **HTML5**, **CSS3** (Flexbox, Grid) và **JavaScript**.</li>
+                <li>✅ **Tối ưu hóa:** Cải thiện tốc độ tải trang và cơ bản về SEO.</li>
+            </ul>
+        </section>
+
+        <div class="email-signup" style="margin-top: 40px;">
+            <h3>Bạn có ý tưởng thiết kế? Hãy trao đổi với Ân</h3>
+            <input type="email" placeholder="Nhập Email của bạn">
+            <button>Nhận Tư Vấn</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chí Ân Web Design. Cảm ơn bạn đã ghé thăm.</p>
+    </footer>
+</body>
+</html>
