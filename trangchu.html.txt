@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chí Ân Web Design | Trang Chủ</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chí Ân Web Design</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="trangchu.html" class="active">Trang chủ</a></li>
+                <li><a href="thongtin.html">Thông tin</a></li>
+                <li><a href="dichvu.html">Dịch vụ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Giải pháp thiết kế web cá nhân</h2>
+        <p>Tôi cung cấp các dịch vụ thiết kế website chuyên nghiệp, tạo ra các trang web độc đáo và phù hợp với thương hiệu riêng của bạn.</p>
+        
+        <div class="email-signup">
+            <h3>Liên hệ để nhận tư vấn miễn phí</h3>
+            <input type="email" placeholder="Nhập Email của bạn">
+            <button>Liên hệ</button>
+        </div>
+        
+        <hr>
+
+        <section class="html5-info">
+            <img src="html5_logo.png" alt="Sử dụng công nghệ mới nhất" class="logo"> 
+            
+            <h2>Kỹ năng Lập trình Web</h2>
+            <p>Tôi tập trung vào việc sử dụng HTML5, CSS3 và JavaScript để tạo ra các trang web hiện đại, đáp ứng (responsive) và tối ưu trên mọi thiết bị.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chí Ân Web Design</p>
+    </footer>
+</body>
+</html>

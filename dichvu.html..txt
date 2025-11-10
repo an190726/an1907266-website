@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chí Ân Web Design | Dịch Vụ</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chí Ân Web Design</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="thongtin.html">Thông tin</a></li>
+                <li><a href="dichvu.html" class="active">Dịch vụ</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Các Dịch Vụ Phát Triển Web Cá Nhân Của Chí Ân</h2>
+        
+        <section class="service-list">
+            
+            <div class="service-item">
+                <h3>1. Thiết Kế Landing Page Chuyển Đổi Cao</h3>
+                <p>Tạo các trang đích (Landing Page) được tối ưu hóa để tăng tỷ lệ chuyển đổi, phục vụ cho các chiến dịch quảng cáo và ra mắt sản phẩm mới.</p>
+                <p>Công nghệ: HTML5, CSS3, Javascript.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>2. Website Cá Nhân (Portfolio & Blog)</h3>
+                <p>Xây dựng trang web cá nhân để bạn trưng bày dự án, kinh nghiệm làm việc (Portfolio) hoặc chia sẻ kiến thức (Blog) với giao diện độc đáo, ấn tượng.</p>
+                <p>Phù hợp với: Freelancer, chuyên gia, blogger.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>3. Tối Ưu Hóa Giao Diện Di Động (Responsive)</h3>
+                <p>Chuyển đổi các website cũ thành giao diện đáp ứng (Responsive Design), đảm bảo trang web hiển thị hoàn hảo trên mọi kích thước màn hình, từ điện thoại đến máy tính.</p>
+                <p>Đảm bảo trải nghiệm người dùng tốt nhất.</p>
+            </div>
+        </section>
+
+        <div class="email-signup" style="margin-top: 40px;">
+            <h3>Gửi yêu cầu thiết kế riêng cho Chí Ân</h3>
+            <input type="email

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chí Ân Web Design | Thông Tin</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chí Ân Web Design</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="thongtin.html" class="active">Thông tin</a></li> 
+                <li><a href="dichvu.html">Dịch vụ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Giới Thiệu Về Chí Ân Web Design</h2>
+        
+        <section class="about-us">
+            <h3>Tầm nhìn và Sứ mệnh</h3>
+            <p><strong>Chí Ân Web Design</strong> được thành lập với sứ mệnh giúp các cá nhân và doanh nghiệp nhỏ hiện thực hóa ý tưởng trực tuyến. Tôi tin rằng mỗi thương hiệu đều xứng đáng có một trang web đẹp, hiện đại và hoạt động hiệu quả.</p>
+            <p>Tầm nhìn của tôi là trở thành đối tác tin cậy, cung cấp giải pháp thiết kế web cá nhân hóa, lấy người dùng làm trung tâm.</p>
+            
+            <h3>Giá trị cốt lõi</h3>
+            <ul>
+                <li><strong>Sáng tạo:</strong> Luôn cập nhật các xu hướng thiết kế mới nhất.</li>
+                <li><strong>Chất lượng:</strong> Cam kết mã nguồn sạch, tối ưu và chuẩn SEO.</li>
+                <li><strong>Tận tâm:</strong> Hỗ trợ và tư vấn nhiệt tình xuyên suốt quá trình dự án.</li>
+            </ul>
+        </section>
+
+        <section class="team-info" style="margin-top: 30px;">
+            <h3>Về Người Sáng Lập (Chí Ân)</h3>
+            <p>Tôi là Chí Ân, một nhà phát triển web **Front-end** với kinh nghiệm xây dựng nhiều loại trang web khác nhau, từ Portfolio cá nhân đến Landing Page bán hàng.</p>
+            <p>Tôi chuyên sử dụng HTML5, CSS3 (bao gồm Flexbox & Grid) và JavaScript để tạo ra những trải nghiệm người dùng mượt mà và trực quan.</p>
+        </section>
+
+        <div class="email-signup" style="margin-top: 40px;">
+            <h3>Bạn có dự án cần thực hiện? Hãy để lại thông tin</h3>
+            <input type="email" placeholder="Nhập Email để bắt đầu">
+            <button>Liên hệ ngay</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chí Ân Web Design. Liên hệ: contact@chianweb.com</p>
+    </footer>
+</body>
+</html>
