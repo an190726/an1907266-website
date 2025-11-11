@@ -3,60 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Chí Ân WEB DESIGN - Tầm Nhìn và Kinh Nghiệm</title>
+    <title>Bài Tập CSS Căn Bản</title>
     
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-        <h1>Chí Ân WEB DESIGN</h1>
-        
-        <nav>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Thông tin</a></li>
-                <li><a href="#">Dịch vụ</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="about">
-            <h2>Về Chí Ân: Tầm Nhìn và Kinh Nghiệm</h2>
-            
-            <div class="mission-statement">
-                <h2>Sứ mệnh của tôi</h2>
-                <p>Chí Ân Web Design tập trung vào việc tạo ra các giải pháp web <strong>"hiệu quả"</strong> và <strong>"thẩm mỹ"</strong> cho các cá nhân và doanh nghiệp nhỏ. Sứ mệnh của tôi là biến ý tưởng của bạn thành một giao diện trực tuyến chuyên nghiệp, dễ sử dụng.</p>
-                <p>Tôi cam kết mang lại sản phẩm chất lượng, từ một nguồn sách đến trải nghiệm người dùng tối ưu trên mọi thiết bị.</p>
-            </div>
-        </section>
-
-        <hr class="blue-divider">
-        
-        <section class="expertise">
-            <h2>Lĩnh vực chuyên môn</h2>
-            
-            <ul class="skill-list">
-                <li><strong>Thiết kế Responsive</strong>: Đảm bảo trang web hiển thị tối ưu trên điện thoại, máy tính bảng và máy tính.</li>
-                <li>Lập trình Front-end: <strong>HTML</strong>, <strong>CSS</strong> (Flexbox, Grid) và <strong>JavaScript</strong>.</li>
-                <li>Tối ưu hóa: Cải thiện tốc độ tải trang và các yếu tố về SEO.</li>
-            </ul>
-        </section>
-        
-        <section class="contact-section">
-            <p>Bạn có ý tưởng thiết kế? Hãy trao đổi với Ân</p>
-            <form>
-                <input type="email" placeholder="Nhập Email của bạn" required>
-                <button type="submit">Nhận Tư Vấn</button>
-            </form>
-        </section>
-    </main>
     
-    <footer>
-        <p>© 2025 Chí Ân Web Design. Cảm ơn bạn đã ghé thăm.</p>
-    </footer>
+    <h1 class="my-class-title">
+        Tôi là học sinh lớp 41T2
+    </h1>
 
+    <p>Đây là đoạn văn bản minh họa cho trang web của tôi.</p>
+    
 </body>
 </html>
+/* --- Style cho Tiêu đề H1 --- */
+.my-class-title {
+    /* 1. Đổi màu chữ thành ĐỎ */
+    color: red; 
+    
+    /* 2. Căn giữ (Căn giữa) */
+    text-align: center;
+    
+    /* 3. Đặt font chữ là Arial (và sans-serif làm dự phòng) */
+    font-family: Arial, sans-serif;
+    
+    /* 4. In nghiêng */
+    font-style: italic; 
+    
+    /* Thêm một số style khác để làm nổi bật */
+    margin-top: 50px;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+/* Style cơ bản cho các phần còn lại */
+body {
+    background-color: #f0f0f0;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
