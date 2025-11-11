@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ - Chi Ân Web Design</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+    <style>
+        /* CSS sẽ được đặt ở mục 2 */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="thongtin.html">Thông tin</a></li>
+                <li><a href="dichvu.html">Dịch vụ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Các Dịch Vụ Của Chi Ân Web Design</h1>
+
+        <section class="service-item">
+            <h2>Thiết Kế Website Cá Nhân</h2>
+            <p>Xây dựng portfolio, blog cá nhân hoặc trang giới thiệu dịch vụ riêng, tạo dấu ấn chuyên nghiệp trên Internet.</p>
+        </section>
+
+        <section class="service-item">
+            <h2>Thiết Kế Website Doanh Nghiệp Nhỏ</h2>
+            <p>Trang web giới thiệu công ty, sản phẩm/dịch vụ, giúp tiếp cận khách hàng tiềm năng và tăng uy tín thương hiệu.</p>
+        </section>
+
+        <section class="service-item">
+            <h2>Tối Ưu Hóa Tốc Độ và Trải Nghiệm</h2>
+            <p>Nâng cao hiệu suất website hiện có, cải thiện tốc độ tải trang để giữ chân người dùng và hỗ trợ SEO tốt hơn.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chi Ân Web Design. Liên hệ: contact@chianweb.com</p>
+    </footer>
+</body>
+</html>

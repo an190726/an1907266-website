@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin - Giới Thiệu Công Ty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chí Ân WEB DESIGN</h1>
+        <nav>
+            <ul>
+                <li><a href="trangchu.html">Trang Chủ</a></li>
+                <li><a href="thongtin.html" class="active">Thông Tin</a></li>
+                <li><a href="dichvu.html">Dịch Vụ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Về Chúng Tôi</h2>
+        <p>Phần này sẽ trình bày về tầm nhìn, sứ mệnh và kinh nghiệm của Chí Ân.</p>
+        </main>
+
+    <footer>
+        <p>&copy; 2025 Chí Ân Web Design</p>
+    </footer>
+</body>
+</html>
