@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Chủ - Chi Ân Web Design</title>
-    <link rel="stylesheet" href="/* Trước đây có thể là: */
-/*
-.main-title {
-    color: white; 
-    background-color: red;
-    padding: 15px 30px; 
-    display: inline-block; 
-    font-size: 2.5em;
-    text-transform: uppercase;
-}
-*/
-
-/* Chỉnh sửa thành: */
-.main-title {
-    color: red; /* CHỮ ĐỎ */
-    background-color: transparent; /* Nền trong suốt/trắng */
-    padding: 0; /* Bỏ padding nếu không dùng nền */
-    display: block; /* Trở lại mặc định */
     
-    /* Giữ lại font size và text transform nếu muốn */
-    font-size: 2.5em;
-    text-transform: uppercase;
-    margin-top: 30px;
-}">
+    <link rel="stylesheet" href="style.css"> 
+    
+    <style>
+        .main-title {
+            color: red; /* CHỮ ĐỎ */
+            background-color: transparent; 
+            padding: 0; 
+            display: block; 
+            font-size: 2.5em;
+            text-transform: uppercase;
+            margin-top: 30px;
+        }
+        
+        /* Thêm màu đỏ cho các tiêu đề phụ khác (nếu cần) */
+        h2 {
+            color: red; 
+        }
+
+        /* Thêm màu đỏ cho link trong footer */
+        .main-footer a {
+            color: red;
+        }
+
+        /* Định nghĩa lại màu đỏ cho link đang active */
+        .active-link {
+            color: red !important;
+            border-bottom: 2px solid red;
+        }
+        
+        /* Cần thêm các style cơ bản khác ở đây hoặc trong style.css */
+    </style>
 </head>
 <body>
     
@@ -54,7 +62,7 @@
                 Với kinh nghiệm về **Front-end** (HTML5, CSS3, JavaScript), tôi cam kết mang lại những trải nghiệm người dùng mượt mà và trực quan.
             </p>
             <div class="cta-box">
-                <a href="dichvu.html" class="cta-button">Xem Dịch Vụ Của Tôi</a>
+                <a href="dichvu.html" class="cta-button" style="background-color: red;">Xem Dịch Vụ Của Tôi</a>
                 <a href="thongtin.html" class="cta-button secondary-cta">Tìm Hiểu Về Tôi (41T2)</a>
             </div>
         </section>
@@ -67,4 +75,3 @@
 
 </body>
 </html>
-
