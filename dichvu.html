@@ -4,44 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dịch Vụ - Chi Ân Web Design</title>
-    <link rel="stylesheet" href="style.css"> 
-    
-    <style>
-        /* CSS sẽ được đặt ở mục 2 */
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
+    
+    <header class="main-header">
+        <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="thongtin.html">Thông tin</a></li>
-                <li><a href="dichvu.html">Dịch vụ</a></li>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="thongtin.html">Thông Tin (41T2)</a></li>
+                <li><a href="dichvu.html" class="active-link">Dịch Vụ</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Các Dịch Vụ Của Chi Ân Web Design</h1>
+    <main class="container">
+        <h1 class="main-title">CÁC DỊCH VỤ CỦA CHI ÂN</h1>
+        <hr class="divider">
+        
+        <section class="section services-section">
+            <h2>Danh mục Dịch Vụ Chính</h2>
+            
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>1. Thiết Kế Website Cá Nhân</h3>
+                    <p>Xây dựng trang web giới thiệu bản thân, portfolio chuyên nghiệp, làm nổi bật kỹ năng và thành tựu cá nhân.</p>
+                </div>
+                
+                <div class="service-item">
+                    <h3>2. Phát Triển Giao Diện Front-end</h3>
+                    <p>Chuyển đổi các bản thiết kế (Figma, Sketch, PSD) thành mã HTML/CSS/JS hoạt động, tối ưu hóa tốc độ và trải nghiệm người dùng.</p>
+                </div>
+                
+                <div class="service-item">
+                    <h3>3. Tối Ưu Hóa Tương Thích Di Động (Responsive)</h3>
+                    <p>Đảm bảo trang web hiển thị và hoạt động hoàn hảo trên mọi thiết bị, từ desktop đến điện thoại thông minh và máy tính bảng.</p>
+                </div>
+            </div>
 
-        <section class="service-item">
-            <h2>Thiết Kế Website Cá Nhân</h2>
-            <p>Xây dựng portfolio, blog cá nhân hoặc trang giới thiệu dịch vụ riêng, tạo dấu ấn chuyên nghiệp trên Internet.</p>
-        </section>
-
-        <section class="service-item">
-            <h2>Thiết Kế Website Doanh Nghiệp Nhỏ</h2>
-            <p>Trang web giới thiệu công ty, sản phẩm/dịch vụ, giúp tiếp cận khách hàng tiềm năng và tăng uy tín thương hiệu.</p>
-        </section>
-
-        <section class="service-item">
-            <h2>Tối Ưu Hóa Tốc Độ và Trải Nghiệm</h2>
-            <p>Nâng cao hiệu suất website hiện có, cải thiện tốc độ tải trang để giữ chân người dùng và hỗ trợ SEO tốt hơn.</p>
+            <section class="cta-section">
+                <h2>Bạn đã sẵn sàng bắt đầu dự án?</h2>
+                <a href="mailto:contact@chianweb.com" class="cta-button">Liên Hệ Ngay Với Tôi</a>
+            </section>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Chi Ân Web Design. Liên hệ: contact@chianweb.com</p>
+    <footer class="main-footer">
+        <p>&copy; 2025 Chi Ân Web Design. Liên hệ: <a href="mailto:contact@chianweb.com">contact@chianweb.com</a></p>
     </footer>
+
 </body>
 </html>
